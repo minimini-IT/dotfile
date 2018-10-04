@@ -25,7 +25,6 @@ set hidden " バッファが編集中でもその他のファイルを開ける�
 set showcmd " 入力中のコマンドをステータスに表示する
 " 見た目系
 set number " 行番号を表示
-set cursorline " 現在の行を強調表示
 set virtualedit=onemore " 行末の1文字先までカーソルを移動できるように
 set smartindent " インデントはスマートインデント
 set visualbell " ビープ音を可視化
@@ -42,7 +41,7 @@ set list listchars=tab:\▸\- " 不可視文字を可視化(タブが「▸-」�
 set expandtab " Tab文字を半角スペースにする
 set tabstop=2 " 行頭以外のTab文字の表示幅（スペースいくつ分）
 set shiftwidth=2 " 行頭でのTab文字の表示幅
-set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set softtabstop=2 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 set autoindent " 改行時に前の行のインデントを継続する
 " 検索系
 set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
