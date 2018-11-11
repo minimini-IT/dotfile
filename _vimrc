@@ -12,6 +12,7 @@ filetype plugin indent on
 
 set encoding=utf-8
 scriptencoding utf-8
+set clipboard=unnamed,autoselect
 set fileencoding=utf-8 " 保存時の文字コード
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
@@ -36,6 +37,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <down> gj
 nnoremap <up> gk
+inoremap jj <Esc> 
+" insertでjjの入力でESCとする
 " Tab系
 set list listchars=tab:\▸\- " 不可視文字を可視化(タブが「▸-」と表示される)
 set expandtab " Tab文字を半角スペースにする
@@ -58,6 +61,7 @@ set sidescroll=1 " 左右スクロールは一文字づつ行う
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 source $VIMRUNTIME/macros/matchit.vim " Vimの「%」を拡張する
+set gdefault "置換時defaultでgオプション
 
 "コマンド補完
 set wildmenu " コマンドモードの補完
