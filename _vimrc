@@ -7,8 +7,24 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/syntastic'
 Plugin 'Yggdroot/indentLine'
+Plugin 'cohama/lexima.vim'
+Plugin 'alvan/vim-closetag'
+Plugin 'Valloric/MatchTagAlways'
+
 call vundle#end()
 filetype plugin indent on
+"alvan/vim-closetagのオプション
+let g:closetag_filenames = '*.html, *.php'
+let g:closetag_filetypes = 'html,php'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+"Valloric/MatchTagAlwaysのオプション
+let g:mta_use_matchparen_group = 1
+let g:mta_filetypes = {
+  \ 'html' : 1,
+  \ 'php' : 1,
+  \}
 
 set encoding=utf-8
 scriptencoding utf-8
@@ -32,6 +48,7 @@ set visualbell " ビープ音を可視化
 set showmatch " 括弧入力時の対応する括弧を表示
 set laststatus=2 " ステータスラインを常に表示
 set wildmode=list:longest " コマンドラインの補完
+set filetype=html
 " 行が折り返し表示されていた場合、行単位ではなく表示行単位でカーソルを移動する
 nnoremap j gj
 nnoremap k gk
